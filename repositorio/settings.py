@@ -44,9 +44,12 @@ INSTALLED_APPS = [
     'curso',
     'orientador',
 
-
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS='bootstrap5'
+CRISPY_TEMPLATE_PACK='bootstrap5'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -86,13 +89,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'repositorio',
         'USER': 'postgres',
-        'PASSWORD': '123456',
+        'PASSWORD': 'guga071105',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
 
-
+LOGIN_REDIRECT_URL='/'
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
