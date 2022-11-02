@@ -9,4 +9,6 @@ urlpatterns = [
     path('', include('apps.tcc.urls')),
     path("autor/", include('apps.autor.urls')),
     path('accounts/',include('apps.acocounts.urls')),
-]
+    path("orientador/", include('apps.orientador.urls')),
+    path("curso/", include('apps.curso.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

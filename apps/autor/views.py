@@ -11,18 +11,19 @@ from .form import InsereAutor
 
 class AutorListView(LoginRequiredMixin, ListView):
     model = Autor
-    template_name: str = "autor/base.html"
+    template_name = "list.html"
 
 class AutorUpdateView(LoginRequiredMixin, UpdateView):
     model = Autor
     fields = "__all__"
-    template_name = "autor/update.html"
+    template_name = "update.html"
     success_url = "/autor/"
 
 class AutorCreateView(LoginRequiredMixin, CreateView):
     model = Autor
     form_class = InsereAutor
     template_name = "criar.html"
+    success_url = "/autor/"
     def form_valid(self, form):
         return super().form_valid(form)
 
@@ -30,8 +31,8 @@ class AutorCreateView(LoginRequiredMixin, CreateView):
 class AutorDeleteView(LoginRequiredMixin, DeleteView):
     model = Autor
     success_url = "/autor/"
-    template_name = "autor/delete.html"
+    template_name = "delete.html"
 
 class AutorDetailView(LoginRequiredMixin, DetailView):
     model = Autor
-    template_name = "autor/detail.html"
+    template_name = "detail.html"
