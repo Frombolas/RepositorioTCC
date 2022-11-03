@@ -24,7 +24,7 @@ class TCCCreateView(LoginRequiredMixin, CreateView):
 class TCCUpdateView(LoginRequiredMixin, UpdateView):
     model = TCC
     fields = "__all__"
-    template_name = "update.html"
+    template_name = "update_t.html"
     success_url = "/"
 
 #Deletar Usuário

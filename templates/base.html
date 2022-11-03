@@ -19,11 +19,30 @@
             <div class="navbar-item">
                 <h1><a href="{% url 'listTCC' %}"><img style="width:30%;" src="{% static 'img/cz22.png' %}" alt=""></a></h1>                        
                 </div>
-            <div>
-                <a class="navbar-item" href="{% url 'criaAutor' %}">Autor</a>
-                <a class="navbar-item" href="{% url 'criaOrientador' %}">Orientador</a>
-                <a class="navbar-item" href="{% url 'criaCurso' %}">Curso</a>
-                <a class="navbar-item" href="{% url 'criaTCC' %}">TCC</a>
+                    
+                <a class="navbar-item" href="{% url 'listAutor' %}">Autor</a>
+                <a class="navbar-item" href="{% url 'listOrientador' %}">Orientador</a>
+                <a class="navbar-item" href="{% url 'listCurso' %}">Curso</a>
+                <a class="navbar-item" href="{% url 'listTCC' %}">TCC</a>
+                {% if user.is_authenticated %}
+                <a class="navbar-item" style="text-decoration: none;margin-left: 375px;" href="{% url 'perfil' pk=user.id %}">
+                    
+                      {{ user.get_username }}
+                    
+                  </a>
+                {% else %}
+                  <a class="accounts-button login navbar-item" style="text-decoration: none;margin-left: 320px;" href="{% url 'login' %}">
+                    
+                      Login                   
+                  </a>      
+                  <a class="accounts-button register navbar-item" href="{% url 'register' %}">
+                
+                      Cadastro
+                    
+                  </a>
+                    
+                {% endif %}
+                    
                 </div>
         </div>
     </div>

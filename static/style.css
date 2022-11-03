@@ -12,21 +12,20 @@ body{
 
 }
 .navbar-left{
-    padding-right: 4%;
+   
     padding-left: 3%;
     display:flex;
     align-items:center;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 20%;
+
 }
 
 .navbar-item{
-    padding-left: 10px;
     cursor: pointer;
-    padding-left: 10px;
     color:white;
+
 }
 
 
