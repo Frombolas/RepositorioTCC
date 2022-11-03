@@ -35,4 +35,4 @@ class TCCDeleteView(LoginRequiredMixin, DeleteView):
 
 class TCCDetailView(LoginRequiredMixin, DetailView):
     model = TCC
-    template_name = "detail.html"
+    template_name = "detail_t.html"

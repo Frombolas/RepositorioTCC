@@ -25,7 +25,7 @@ class OrientadorCreateView(LoginRequiredMixin, CreateView):
 class OrientadorUpdateView(LoginRequiredMixin, UpdateView):
     model = Orientador
     fields = "__all__"
-    template_name = "detail.html"
+    template_name = "detail_o.html"
     success_url = "/orientador/"
 
 class OrientadorDeleteView(LoginRequiredMixin, DeleteView):

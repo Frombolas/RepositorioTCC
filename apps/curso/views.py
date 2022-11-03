@@ -24,7 +24,7 @@ class CursoCreateView(LoginRequiredMixin, CreateView):
 class CursoUpdateView(LoginRequiredMixin, UpdateView):
     model = Curso
     fields = "__all__"
-    template_name = "detail.html"
+    template_name = "detail_c.html"
     success_url = "/curso/"
 
 class CursoDeleteView(LoginRequiredMixin, DeleteView):
